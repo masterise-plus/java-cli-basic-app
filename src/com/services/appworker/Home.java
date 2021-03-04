@@ -6,6 +6,7 @@ public class Home {
 
     Scanner sc = new Scanner(System.in);
     User us;
+    private int userAge;
     private String userName,userGender;
 
     public Home() {
@@ -16,6 +17,21 @@ public class Home {
         //User Set
         userName = setUserName();
         userGender = setUserGender();
+        userAge = setUserAge();
+    }
+
+    private int setUserAge() {
+        int age;
+        addSpace();
+        do {
+            System.out.println("Please Input Your Ages");
+            System.out.print("Min. Age is (18) >> ");
+            age = sc.nextInt();
+        }while (age < 18);
+
+        System.out.println(age);
+
+        return age;
     }
 
     private void addSpace() {
@@ -26,21 +42,25 @@ public class Home {
 
 
     private String setUserGender() {
+        int choose;
         addSpace();
-        System.out.println("Please Select Your Gender");
-        System.out.println("1. Male");
-        System.out.println("2. Female");
-        System.out.print("Choose : ");
-        int choose = sc.nextInt();
 
+        do {
+            System.out.println("Please Select Your Gender");
+            System.out.println("1. Male");
+            System.out.println("2. Female");
+            System.out.print("Choose : ");
+            choose = sc.nextInt();
+        }while (choose < 1 || choose > 2);
 
-            if (choose == 1) {
-                us.setGenderM();
-            }else if (choose == 2) {
-                us.setGenderFe();
-            }
+        if (choose == 1) {
+            us.setGenderM();
+        }else {
+            us.setGenderFe();
+        }
 
         System.out.println(us.getGender());
+
 
         return us.getGender();
 
