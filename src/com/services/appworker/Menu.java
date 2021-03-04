@@ -22,6 +22,19 @@ public class Menu {
                 addSpace();
                 Home hw = new Home();
                 break;
+
+            case 2:
+                //View user
+                break;
+
+            case 3:
+                //Manage User
+                break;
+
+            case 4:
+                System.out.println("Thank you so much");
+                System.out.println("Have a great day");
+                break;
         }
 
     }
