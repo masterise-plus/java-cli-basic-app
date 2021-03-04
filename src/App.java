@@ -1,4 +1,4 @@
-import com.services.appworker.Home;
+import com.services.appworker.Menu;
 
 public class App {
 
@@ -7,7 +7,7 @@ public class App {
         System.out.println("=========================");
         System.out.println("======= WELCOME =========");
         System.out.println("THIS IS BASIC CLI APP");
-        Home hm = new Home();
+        Menu mn = new Menu();
     }
 
     public static void main(String[]args) {
